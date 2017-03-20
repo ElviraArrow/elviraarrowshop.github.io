@@ -1,0 +1,863 @@
+@font-face { 
+	font-family: 'RobotoRegular';
+	src:url('../fonts/RobotoRegular/RobotoRegular.ttf');
+}
+@font-face { 
+	font-family: 'RobotoLight';
+	src:url('../fonts/RobotoLight/RobotoLight.ttf');
+}
+body, html { 
+	margin: 0; 
+	padding: 0; 
+	background: white; 
+	font-family: Arial; 
+}
+header {
+	height: 50px;
+	width: 100%;
+	background-color: rgb(37, 37, 37);
+	.container {
+		width: 100%;
+		height: 100%;
+		padding-top: 18px;
+		max-width: 1280px;
+		margin: 0 auto;
+		margin-left: 0;	
+		font-family: 'RobotoLight', sans-serif;
+		color: white;
+		.menu {				
+			a {
+				display: inline;
+				float: left;
+				font-size: 12px;
+				padding-right: 15px;
+				padding-left: 12px;
+				position: relative;
+				left: 30px;
+				border-right: 2px solid white;
+				text-decoration: none;
+			}
+			a:hover { cursor: pointer; color: #ff6978; }
+
+		}
+		.menu a:last-child { 
+			border-right: none;
+		}
+		.menu_ham {	
+			float: left;
+			position: relative;
+			left: 30px;
+			img {
+				max-width: 27px;
+				margin-right: 20px;
+				margin-bottom: 0;
+			}
+		}
+		#hidden-menu { 
+			width: 150px;
+			display: none;
+			position: absolute;
+			float: left;
+			z-index: 20;
+			top: 50px;
+			position: fixed;
+		   // left: 15px;
+			font-size: 13px;
+			border: 1px solid rgb(37, 37, 37);
+			color: rgb(37, 37, 37);
+			background-color: white;
+			 a {
+				display: block;
+				padding: 10px 40px;
+			}
+			a:hover { cursor: pointer; color: #ff6978; }
+		}
+		.number {
+			width: 160px;
+			position: absolute;
+			right: 30px;
+			font-size: 12px;
+			overflow: hidden;
+			img {
+				width: 16px;
+				display: inline;
+				float: right;			
+			}
+			h4 {
+				display: inline;
+				float: right;
+				padding-left: 6px;
+				margin: 0;
+			}
+		}
+	}
+}
+
+.gretong {
+	height: 140px;
+	padding-right: 30px;
+	padding-left: 30px;
+	.container {
+		width: 100%;
+		max-width: 1280px;
+		margin: 0 auto;
+		img {
+			width: 185px;
+			padding-top: 37px;
+			float: left;
+		}
+		.right_container {
+			width: 455px;
+			float: right;
+			text-align: center;
+			.right {
+				float: left;
+				width: 100%;
+				height: 65px;
+				margin-top: 15px;
+				.login {
+					width: 68px;
+					height: 28px;
+					display: inline;
+					margin-right: px;
+					background-color: white;
+					border: none;
+					font-size: 14px;
+					float: left;
+					cursor: pointer;
+				}
+				.login:hover { border: 1px solid black; }
+				.register {
+					width: 82px;
+					height: 28px;
+					display: inline;
+					margin-right: 25px;
+					background-color: white;
+					border: none;
+					font-size: 14px;
+					float: left;
+					cursor: pointer;
+					border: 1px solid transparent;
+				}
+				.register:hover { border: 1px solid black; }
+				.basket {
+					width: 110px;
+					height: 56px;
+					display: inline;
+					font-size: 12px;
+					float: left;	
+					.item {
+						display: inline;
+						float: left;
+						p { margin: 0;}
+						span { display: block; }
+					}
+					.img {
+						display: inline;
+						float: right;
+						margin-top: 10px;
+						img {
+							width: 20px;
+							height: 20px;
+							padding: 0;
+						}
+					}
+				}
+				.checkout {
+					width: 104px;
+					height: 30px;
+					display: inline;
+					float: right;
+					background-color: black;
+					border: none;
+					color: white;
+					font-size: 14px;
+					cursor: pointer;
+				}
+				.checkout:hover { border-shadow: 1px solid black; }
+			}
+			.search {
+				max-width: 455px;
+				height: 38px;		
+				background-color: white;
+				float: right;
+				input[type="search"] {
+					margin-top: -25px;
+					width: 407px;
+					height: 38px;	
+					border: 1px solid rgb(216, 216, 216);
+					border-right-color: transparent;
+					outline: none;
+					line-height: 38px;
+					vertical-align: middle; 
+				}
+				input[type="search"]:hover { background-color: rgb(243, 244, 245); }
+				input[type="submit"] {
+					margin-left: -7px;
+					width: 38px;
+					height: 38px;	    
+					background: url(../img/search.png) no-repeat 50% 50%;
+					cursor: pointer;
+					border: 1px solid rgb(216, 216, 216);
+					border-left-color: transparent;
+					outline: none;
+				}
+			}
+		}
+	}
+} 
+.navigation {
+	height: 35px;
+	padding-right: 30px;
+	padding-left: 30px;
+	.container {
+		width: 100%;
+		max-width: 1280px;
+		height: 100%;
+		margin: 0 auto;
+		background-color: rgb(245, 245, 245);
+		line-height: 35px;
+		a {
+			width: 11%;
+			display: inline-block;
+			float: left;
+			text-align: center;
+			vertical-align: middle;
+			font-size: 12px;
+			font-family: 'RobotoLight';
+			color: black;
+		}
+		a:first-child { background-color: rgb(228, 228, 228); }
+		a:hover {
+			color: white;
+			cursor: pointer;			
+		}
+		.orange:hover {	background-color: rgb(239, 95, 33); }
+		.dark_green:hover {	background-color: rgb(88, 157, 62);	}
+		.pink:hover { background-color: rgb(214, 31, 133); }
+		.yellow:hover {	background-color: rgb(248, 159, 27); }
+		.blue:hover { background-color: rgb(0, 103, 124); }
+		.red:hover { background-color: rgb(213, 51, 29); }
+		.dark_blue:hover { background-color: rgb(0, 64, 93); }
+		.green:hover {background-color: rgb(156, 180, 58); }
+	}
+}
+.items {
+	height: 1000px;
+	padding-right: 30px;
+	padding-left: 30px;
+	.container {
+		max-width: 1280px;
+		width: 100%;
+		margin: 0 auto;
+		color: white;
+		text-align: center;
+		.part1 {			
+			width: 100%;
+			margin: 30px auto;
+			overflow: hidden;	
+			.part1-item {
+				float: left;
+				width: 50%;	
+				max-height: 400px;
+				overflow: hidden;				
+				.img-container {					
+					height: 100%;
+					background-size: 100% auto;
+					background-position: center center;
+					background-repeat: no-repeat;
+					overflow: hidden;
+					h2 {
+						margin-top: 200px;
+						font-size: 22px;
+						font-family: 'RobotoLight';
+						color: white;
+						text-align: center;
+					}
+					p {
+						margin-top: 10px;
+						font-size: 17px;
+						font-family: 'RobotoLight';
+					}
+					button {
+						width: 120px;
+						height: 33px;
+						background-color: transparent;
+						color: white;
+						border: 1px solid white;
+						cursor: pointer;
+					}	
+				}	
+			}
+			.arrivals {						
+				.img-container { 
+					margin-right: 15px; 
+					background-image: url('../img/item1.jpg'); 
+				}
+			}
+			.tuxedo {				
+				.img-container { 
+					margin-left: 15px; 
+					background-image: url('../img/item3.jpg'); 
+				}
+			}
+		}
+		.part2 {
+			width: 100%;
+			margin: 30px auto;
+			height: 290px;
+			overflow: hidden;
+			font-family: 'RobotoLight';
+			color: white;
+			.img-container {	
+				height: 100%;
+				background-size: 100% auto;
+				background-position: center center;
+				background-repeat: no-repeat;
+				overflow: hidden;
+				h2 {
+					font-size: 22px;	
+				}
+				p {
+					margin-top: 10px;
+					font-size: 17px;
+				}
+				button {
+					width: 120px;
+					height: 33px;
+					background-color: transparent;
+					color: white;
+					border: 1px solid white;
+					cursor: pointer;
+				}
+			}	
+			.sweater {
+				width: 67%;
+				height: 100%;
+				float: left;
+				.img-container { 
+					margin-right: 15px;
+					background-image: url('../img/item4.jpg'); 
+					h2 {
+					margin-top: 130px;
+					text-align: center;
+					}
+				}
+			}
+			.trekking { 
+				width: 33%;
+				height: 290px;
+				float: left;
+				.img-container { 
+					//height: 100%;
+					margin-left: 15px; 
+					background-image: url('../img/item5.jpg'); 
+					h2 {
+					margin-top: 190px;
+					text-align: left;
+					padding-left: 30px;
+					}
+				}
+			}	
+		}
+		.part3 {
+			width: 100%;
+			margin: 30px auto;
+			height: 270px;
+			overflow: hidden;
+			font-family: 'RobotoLight';
+			color: white;
+			.part3-item {
+				height: 100%;
+				float: left;
+				overflow: hidden;
+				.img-container {
+					height: 100%;
+					background-size: 100% auto;
+					background-position: center center;
+					background-repeat: no-repeat;
+					overflow: hidden;
+				}
+			}
+			.half67 {
+				width: 66%;
+				height: 270px;
+				float: left;
+				overflow: hidden;
+				.glasses {
+					width: 50%;
+					.img-container { 
+						height: 100%;
+						background-image: url('../img/item7.jpg'); 
+						h2 {
+						margin-top: 190px;
+						text-align: left;
+						padding-left: 30px;
+						}
+					}
+				}
+				.t-shirt {
+					width: 50%;
+					.img-container { 
+						height: 100%;
+						margin-left: 30px;
+						background-image: url('../img/item8.jpg'); 
+						h2 {
+						margin-top: 130px;
+						text-align: center;
+						}
+						button {
+						width: 120px;
+						height: 33px;
+						background-color: transparent;
+						border: 1px solid white;
+						color: white;
+						cursor: pointer;
+						}
+					}
+				}
+			}	
+			.watches {
+				width: 34%;
+				.img-container { 
+					width: 100%;
+					margin-left: 30px;
+					background-image: url('../img/item9.jpg'); 
+					h2 {
+					margin-top: 190px;
+					text-align: left;
+					padding-left: 30px;
+					}
+				}
+			}
+		}	
+	}
+}
+footer {
+	max-height: 300px;
+	.container {
+		max-width: 1280px;
+		width: 100%;
+		overflow: hidden;
+		margin: 0 auto;
+		hr { color: rgb(229, 228, 226); }
+		.information {
+			color: rgb(63, 61, 61);
+			font-family: 'RobotoLight';
+			float: left;
+			overflow: hidden;
+			.inner {
+				margin: 0 auto;
+				h3 {
+				font-size: 19px;
+				}
+				ul {
+					padding-left: 0;
+					a {
+						display: block;
+						text-decoration: none;
+						font-size: 15px;
+						text-align: left;
+						line-height: 25px;
+						color: rgb(63, 61, 61);
+					}
+					a:hover { cursor: pointer; color: #ff6978; }	
+				}	
+			}
+		}
+		.group1 {
+			width: 22%;
+			margin-left: 30px;
+		}
+		.group2 { width: 18%; }
+		.group3 { width: 18%;}
+		.group4 {
+			width: 35%;
+			.inner {
+				.buttons {
+					h3 { float: left; }
+					button { 
+						margin: 22px 10px 5px 15px; 
+						width: 95px;
+						height: 25px;
+						background-color: white;
+						color: black;
+						border: 1px solid rgb(229, 228, 226);
+						cursor: pointer;
+					}
+					button:hover { background-color: rgb(229, 228, 226); }
+				}	
+			}
+		}
+		p { 
+			float: none;
+			clear: both;
+			margin: 20px 30px 0px 30px;
+			font-family: 'RobotoLight';
+		}
+	}
+}
+@media(max-width: 1250px) {
+	.items {
+		.part2 {
+			.trekking { 
+				.img-container { background-size: auto 100%; }
+			}	
+		}
+	}
+}
+@media(max-width: 1100px) {
+	.items {
+		.container {
+			.part1 {
+				.part1-item {
+					.img-container { background-size: auto 100%; }
+				}
+			}
+			.part2 {
+				.sweater { width: 66%; }
+				.trekking { width: 34%; }
+			}
+			.part3 {
+				.half67 {
+					.t-shirt { width: 48%; }
+					.part3-item {
+					.img-container { background-size: auto 100%; margin-left: none; }				
+					}				
+				}
+				.watches {
+						.img-container { margin-left: 15px; background-size: auto 100%; }
+						
+				}
+			}
+		}	
+	}
+	footer {
+		.container {
+			.information {
+				.inner {
+					h3 { font-size: 15px; }
+					ul {
+						a { font-size: 13px; }
+					}
+				}
+			}
+			.group1 { width: 19%; }
+			.group2 { width: 17%; }
+			.group3 { width: 17%; }
+			.group4 {
+				 width: 42%; 
+				.inner {
+					.buttons {
+						button { width: 70px; margin-right: none; margin-top: 14px; }
+					}
+				}
+			}
+		}
+	}
+}
+@media(max-width: 900px) {
+	.gretong {
+		.container {
+			.right_container {
+				width: 380px;
+				.right {
+					margin-top: 15px;
+					.up {
+						.login { width: 55px; font-size: 12px; }
+						.register {	width: 70px; margin-right: 25px; font-size: 12px; }
+						.basket {
+							width: 110px;
+							font-size: 11px;
+							float: left;	
+							.item {
+								display: inline;
+								float: left;
+								p { margin: 0;}
+								span { display: block; }
+							}
+							.img { 
+								margin-top: 10px;
+								img { width: 15px; height: 15px; }
+							}
+						}
+					}
+				}
+				.search {
+					max-width: 380px;
+					input[type="search"] { margin-top: -25px; width: 340px; }
+				}
+			}
+		}
+	}		
+	.navigation {
+		.container {
+			a { width: 12%; font-size: 11px; }
+		}
+	}
+}
+
+@media(min-width: 768px) {
+	header {
+		.container {
+			.menu_ham { display: none; }
+		}
+	}
+}
+@media(max-width: 768px) {
+	header {
+		.container {
+			.menu {
+				a { display: none; }
+			}
+		}
+	}
+	.gretong {
+		height: 260px;
+		padding-left: none;
+		.container {
+			img { 
+				margin: auto; 
+				position: absolute; 
+				left: 35%; 
+				overflow: hidden;
+			}
+			.right_container {
+				float: none;
+				margin: auto;
+				padding-top: 110px;
+				position: relative;
+				overflow: hidden;
+			}
+		}
+	}
+	.navigation {
+		.container {
+			a {
+				width: 100%;
+				font-size: 14px;				
+			}
+			a:last-child { margin-bottom: 20px; }
+		}
+	}
+	.items {
+		height: auto;
+		.container {
+			.part1 {
+				height: auto;
+				margin: 0;
+				.arrivals { 
+					width: 100%;
+					margin-bottom: 30px;
+					.img-container { 
+						margin-right: 0; 
+						background-size: 100% auto; 
+						button { margin-bottom: 30px; }
+					}
+			}
+				.tuxedo { 
+					width: 100%; 
+					margin-bottom: 30px;
+					.img-container { 
+						margin-left: 0; 
+						background-size: 100% auto;
+						button { margin-bottom: 30px; } 
+					}
+				}	
+			}
+			.part2 {
+				height: auto;
+				margin: 0;
+				.sweater {
+					width: 100%;
+					margin-bottom: 30px;
+					.img-container { 
+						margin-right: 0; 
+						background-size: 100% auto;
+						h2 { margin-top: 100px; } 
+						button { margin-bottom: 30px; }
+					}
+				}
+				.trekking {
+					width: 100%;
+					margin-bottom: 30px;
+					.img-container { margin-left: 0; background-size: 100% auto; }
+				}
+			}
+			.part3 {
+				height: auto;
+				margin: 0;
+				.half67 {
+					width: 100%;
+					height: auto;
+					.glasses { 
+						width: 100%; 
+						margin-bottom: 30px;
+						.img-container { margin-left: 0; background-size: 100% auto; }
+					}
+					.t-shirt { 
+						width: 100%;
+						margin-bottom: 30px;
+						.img-container { 
+							margin-left: 0; 
+							background-size: 100% auto;
+							button { margin-bottom: 30px; } 
+						} 
+					}
+				}
+				.watches { 
+					width: 100%;
+					.img-container { margin-left: 0; background-size: 100% auto; }
+				}
+			}
+		}
+	}
+	footer {
+		.container {
+			.group1 { width: 38%; padding-left: 30px; }
+			.group2 { width: 45%; }
+			.group3 { width: 38%; padding-left: 60px; }
+			.group4 { width: 50%; }
+		}
+	}
+}	
+@media(max-width: 600px) {
+	.items {
+		.container {
+		.part1 {
+				.arrivals { 
+					.img-container { background-size: auto 100%; }
+				}
+				.tuxedo { 			
+					.img-container { background-size: auto 100%; }
+				}	
+			}	
+		}
+	}
+	footer {
+		.container {
+			.group1 { width: 35%; }
+			.group3 { width: 35%; }
+			.group4 { 
+				.inner {
+					.buttons {
+						h3 {  float: none; }
+						button { float: none; margin-top: 10px; margin-left: 0px; }
+					}
+				}
+			}
+		}
+	}
+}
+@media(max-width: 450px) {
+	.gretong {
+		.container {
+			img { width: 150px; left: 30%; }
+			.right_container {
+				width: 280px;
+				.right {
+					.up {
+						.login {
+							width: 50px;
+							font-size: 11px;
+						}
+						.register {
+						    width: 68px;
+						    margin-right: 15px;
+						    font-size: 11px;
+						}
+						.basket {
+							width: 70px;
+    						font-size: 11px;
+    						img { display: none; }
+
+						}
+						.checkout {
+							width: 70px;
+							font-size: 11px;
+						}
+					}
+				}
+				.search {
+					max-width: 280px;
+					input[type="search"] {
+						width: 240px;
+					}
+				}
+			}
+		}
+	}
+	.items {
+		.container {
+			.part1 {
+				.part1-item {
+					max-height: 250px;
+					.img-container {
+						background-size: auto 100%;
+						h2 { margin-top: 80px; font-size: 17px; }
+						p { font-size: 13px; }
+					}
+				}
+			}
+			.part2 {
+				.sweater {
+					.img-container {
+						max-height: 200px;
+						background-size: auto;
+						h2 { margin-top: 50px; font-size: 17px; }
+						p { font-size: 13px; }
+					}
+				}
+				.trekking {
+					max-height: 200px;
+					.img-container {
+						
+						background-size: 100%;
+						h2 { margin-top: 140px; font-size: 17px; }
+					}
+				}
+			}
+			.part3 {
+				.half67 {
+					.part3-item {
+						max-height: 250px;
+						h2 { margin-top: 140px; font-size: 17px; }
+					}
+				}
+				.watches {
+					.img-container {
+						h2 { margin-top: 140px; font-size: 17px; }
+					}
+				}
+			}
+		}
+	}
+	footer {
+		.container {
+			.information {
+				.inner {
+					h3 { font-size: 12px; }
+					ul {
+						a { font-size: 11px; }
+					}
+				}
+			}
+			.group1 { 
+				padding-left: 10px; 
+			}
+			.group3 { 
+				padding-left: 10px; 
+				margin-left: 30px; 
+			}
+			.group4 { 
+				.inner {
+					.buttons {
+						
+						button { font-size: 11px; }
+					}
+				}
+			}
+			p { font-size: 13px; }
+		}
+	}
+}

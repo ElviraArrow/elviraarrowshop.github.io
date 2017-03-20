@@ -1,0 +1,208 @@
+<!Doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Gretong</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function() {
+			$('#switcher').click(function(){
+				if ($('#hidden-menu').hasClass('hidden')) {
+					$('#hidden-menu').fadeIn('slow');
+					$('#hidden-menu').removeClass('hidden');
+				} else {
+					$('#hidden-menu').fadeOut('slow');
+					$('#hidden-menu').addClass('hidden');	
+				}
+			});
+		});	
+
+	jQuery(function($){
+		$(document).mouseup(function (e){ 
+			var div = $("#hidden-menu"); 
+			if (!div.is(e.target) 
+			    && div.has(e.target).length === 0) { 
+				div.hide();
+			}
+		});
+	});	
+
+	</script>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="menu">
+				<a>HELP</a>
+				<a>CONTACT</a>
+				<a>DELIVERY INFORMATION</a>
+			</div>
+			<div id="switcher" class="menu_ham">
+				<img src="img/menu_ham.png" />
+			</div>
+			<div id="hidden-menu" class="hidden">
+				<a>HELP</a>
+				<a>CONTACT</a>
+				<a>DELIVERY INFORMATION</a>	
+			</div>
+			<div class="number">
+				<h4>CALL US: 032 2352 782</h4>
+				<img src="img/phone.png" />
+			</div>
+		</div>
+	</header>
+	<section class="gretong">
+		<div class="container">
+			<img src="img/logo.png" />
+			<div class="right_container">
+				<div class="right">
+					<div class="up">
+						<button class="login">LOGIN</button>
+						<button class="register">REGISTER</button>
+						<div class="basket">
+							<div class="item">
+								<p><b>&0.00 (0 items)</b></p>
+								<span>(empty card)</span>
+							</div>
+							<div class="img">
+								<img src="img/bag.png" />	
+							</div>	
+						</div>
+						<button class="checkout">CHECKOUT</button>
+					</div>
+				</div>
+				<div class="search">
+					<form>
+						<input type="search" name="Search..." value="Search...">
+						<input type="submit" value="">
+					</form>
+				</div>
+			</div>	
+		</div>
+	</section>
+	<section class="navigation">
+		<div class="container">
+			<a class="orange">HOME</a>
+			<a class="dark_green">NEW ARRIVALS</a>
+			<a class="pink">TUXEDO</a>
+			<a class="yellow">SWEATER</a>
+			<a class="blue">SHOES</a>
+			<a class="red">GLASSES</a>
+			<a class="dark_blue">T-SHIRT</a>
+			<a class="green">WATCHES</a>
+		</div>
+	</section>
+	<section class="items">
+		<div class="container">
+			<div class="part1">
+				<div class="arrivals part1-item">
+					<div class="img-container">
+						<h2>NEW ARRIVALS</h2>
+						<p>REVIVE YOUR WARDROBE WITH CHIC KNITS</p>
+						<button>TAKE A LOOK</button> 
+					</div>
+				</div>
+				<div class="tuxedo part1-item">
+					<div class="img-container">
+						<h2>TUXEDO</h2>
+						<p>REVIVE YOUR WARDROBE WITH CHIC KNITS</p>
+						<button>SHOP NOW</button>
+					</div>
+				</div>
+			</div>
+			<div class="part2">
+				<div class="sweater">
+					<div class="img-container">
+						<h2>SWEATER</h2>
+						<p>REVIVE YOUR WARDROBE WITH CHIC KNITS</p>
+						<button>SHOP NOW</button>
+					</div>	
+				</div>
+				<div class="trekking">
+					<div class="img-container">
+						<h2>Trekking Shoes</h2>
+					</div>
+				</div>
+			</div>
+			<div class="part3">
+				<div class="half67">
+					<div class="glasses part3-item">
+						<div class="img-container">
+							<h2>Casual Glasses</h2>
+						</div>
+					</div>	
+					<div class="t-shirt part3-item">
+						<div class="img-container">
+							<h2>FRESH LOOK T-SHIRT</h2>
+							<button>SHOP NOW</button>
+						</div>
+					</div>
+				</div>	
+				<div class="watches part3-item">
+					<div class="img-container">
+						<h2>Elegant Watches</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="container">
+			<hr />
+			<div class="information group1">
+				<div class="inner">
+					<h3>CUSTOMER CARE</h3>
+					<ul>
+						<a href="">Help Center</a>
+						<a href="">FAQ</a>
+						<a href="">How To Buy</a>
+						<a href="">Delivery</a>
+					</ul>
+				</div>	
+			</div>
+			<div class="information group2">
+				<div class="inner">
+					<h3>ABOUT US</h3>
+					<ul>
+						<a href="">Our Stories</a>
+						<a href="">Press</a>
+						<a href="">Career</a>
+						<a href="">Contact</a>
+					</ul>
+				</div>
+			</div>
+			<div class="information group3">
+				<div class="inner">
+					<h3>MY ACCOUNT</h3>
+					<ul>
+						<a href="">Register</a>
+						<a href="">My cart</a>
+						<a href="">Order History</a>
+						<a href="">Payment</a>
+					</ul>
+				</div>
+			</div>
+			<div class="information group4">
+				<div class="inner">
+					<div class="buttons">	
+						<h3>OUR STORIES</h3>
+						<button>SOLO</button>
+						<button>BOGOR</button>
+					</div>
+					<ul>
+						<a href="">Location</a>
+						<a href="">123456789</a>
+						<a href="">info@sitename.com</a>
+						
+					</ul>
+				</div>
+			</div>
+			<p>Copyrights &#169; 2015 Gretong. All rights reserved | Template by W3layouts</p>
+		</div>
+	</footer>
+</body>
+</html>
